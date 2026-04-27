@@ -1,7 +1,10 @@
+from PyQt6.QtWidgets import QApplication
 import sys
 
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel
-from auth import register_user # تأكد بلي هاد الدالة كترجع True إلا نجح التسجيل و False إلا فشل
+# تأكد بلي هاد الدالة كترجع True إلا نجح التسجيل و False إلا فشل
+from auth import register_user
+
 
 class RegisterPage(QWidget):
     def __init__(self, controller):
@@ -10,16 +13,22 @@ class RegisterPage(QWidget):
         self.controller = controller
         layout = QVBoxLayout()
 
-        self.username = QLineEdit(); self.username.setPlaceholderText("Username")
-        
-        # 1. تصحيح الباسورد: باش يولي مخفي
-        self.password = QLineEdit(); self.password.setPlaceholderText("Password")
-        self.password.setEchoMode(QLineEdit.EchoMode.Password) 
+        self.username = QLineEdit()
+        self.username.setPlaceholderText("Username")
 
-        self.email = QLineEdit(); self.email.setPlaceholderText("Email")
-        self.phone = QLineEdit(); self.phone.setPlaceholderText("+212 Phone")
-        self.country = QLineEdit(); self.country.setPlaceholderText("Country")
-        self.birth = QLineEdit(); self.birth.setPlaceholderText("Birthdate (YYYY-MM-DD)")
+        # 1. تصحيح الباسورد: باش يولي مخفي
+        self.password = QLineEdit()
+        self.password.setPlaceholderText("Password")
+        self.password.setEchoMode(QLineEdit.EchoMode.Password)
+
+        self.email = QLineEdit()
+        self.email.setPlaceholderText("Email")
+        self.phone = QLineEdit()
+        self.phone.setPlaceholderText("+212 Phone")
+        self.country = QLineEdit()
+        self.country.setPlaceholderText("Country")
+        self.birth = QLineEdit()
+        self.birth.setPlaceholderText("Birthdate (YYYY-MM-DD)")
 
         self.msg = QLabel("")
 
@@ -39,7 +48,9 @@ class RegisterPage(QWidget):
 
     def save(self):
         # 2. التحقق من أن الخانات ماشي خاوية
-        if not all([self.username.text(), self.password.text(), self.email.text()]):
+        if not all([self.username.text(),
+                    self.password.text(),
+                    self.email.text()]):
             self.msg.setText("Please fill in all fields! ❌")
             self.msg.setStyleSheet("color: red;")
             return
@@ -62,22 +73,22 @@ class RegisterPage(QWidget):
                 self.controller.show_login()
             else:
                 self.msg.setStyleSheet("color: red;")
-                self.msg.setText("Registration Failed! (Username/Email taken?)")
-                
+                self.msg.setText(
+                    "Registration Failed! (Username/Email taken?)")
+
         except Exception as e:
             self.msg.setStyleSheet("color: red;")
             self.msg.setText(f"Error: {str(e)}")
             import sys
-from PyQt6.QtWidgets import QApplication
+
 
 # ... (l-class RegisterPage dyalek li k-t-b9a hna) ...
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    
-    # 3titha None 7it ma-3ndnich controller daba, 
+
+    # 3titha None 7it ma-3ndnich controller daba,
     # ila kenti m-3refha f-controller khassk t-dkhlou hna
-    window = RegisterPage(controller=None) 
-    
+    window = RegisterPage(controller=None)
+
     window.show()
     sys.exit(app.exec())

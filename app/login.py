@@ -44,5 +44,5 @@ class LoginPage(QWidget):
 
             self.msg.setText("Wrong ❌")
 
-        except:
+        except BaseException:
             self.msg.setText("No users ❌")
