@@ -1,35 +1,28 @@
 import numpy as np
 import pandas as pd
 import joblib
+import os
 
-# =====================
-# load model
-# =====================
-model = joblib.load("models/xgboost_model.pkl")
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "..", "models", "best_model.pkl")
 
-# =====================
-# prediction function
-# =====================
+model = joblib.load(model_path)
+
+
 def predict_price(data):
     df = pd.DataFrame([data])
 
-    # feature engineering (نفس training)
-    df["age_bien"] = 2024 - df["annee"]
+    # feature engineering (important same training)
+    df["age_bien"] = 2026 - df["annee"]
 
     equip = ["piscine","garage","balcon","terrasse","parking",
              "gardien","ascenseur","jardin","belle_vue"]
 
     df["nb_equipements"] = df[equip].sum(axis=1)
 
-    # prediction
-    price = model.predict(df)[0]
-
-    return price
+    return model.predict(df)[0]
 
 
-# =====================
-# test
-# =====================
 house = {
     "surface": 150,
     "chambres": 3,
@@ -49,6 +42,4 @@ house = {
     "belle_vue": 1
 }
 
-price = predict_price(house)
-
-print("🏠 Price:", int(price), "DH")
+print("🏠 Price:", int(predict_price(house)), "DH")
