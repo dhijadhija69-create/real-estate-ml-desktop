@@ -1,0 +1,21 @@
+email,username,surface,chambres,salles_de_bain,kitchen,etage,annee,localisation,piscine,garage,balcon,terrasse,parking,gardien,ascenseur,jardin,belle_vue,predicted_price,timestamp
+demo@example.com,Demo User,150,3,2,1,5,2015,Marrakech,1,1,1,0,1,0,1,0,1,1850000,2024-03-15 14:30:22
+demo@example.com,Demo User,200,4,3,1,2,2018,Casablanca,0,1,0,1,1,1,0,1,1,2400000,2024-03-16 09:15:44
+53ebadd4,sara@gmail.com,40.0,1,1,0,1,2011,Marrakech,0,1,0,0,0,0,0,0,0,927963,2026-04-28 11:28:20
+cf5d8bf3,sara@gmail.com,30.0,3,2,1,1,2019,Béni Mellal,0,0,1,1,0,0,0,0,0,977522,2026-04-28 11:57:58
+7a8aecab,sara@gmail.com,123.0,2,2,2,3,1988,Kenitra,1,1,1,1,1,1,1,1,1,1521742,2026-04-28 20:22:19
+c8ce7a58,sara@gmail.com,30.0,1,1,1,1,1999,Kenitra,0,0,1,0,0,0,0,0,0,662885,2026-04-28 21:36:32
+6e2d9ed8,sara@gmail.com,111.0,11,4,1,3,2020,Marrakech,0,1,1,0,0,0,1,1,0,1611883,2026-04-28 22:10:14
+e547b396,sara@gmail.com,111.0,11,4,1,3,2020,Béni Mellal,0,1,1,0,0,0,1,1,0,1586106,2026-04-28 22:11:10
+3e3ea9fa,sara@gmail.com,123.0,5,3,2,2,2019,Béni Mellal,0,0,1,1,1,0,1,0,1,1626585,2026-04-28 22:18:29
+2e05ebe7,sara@gmail.com,123.0,5,3,2,2,2019,Marrakech,0,0,1,1,1,0,1,0,1,1671455,2026-04-28 22:18:49
+97ab3d9f,sara@gmail.com,123.0,5,3,2,2,2019,Marrakech,0,0,1,1,1,0,1,0,1,1671455,2026-04-28 22:29:26
+dc7caa68,sara@gmail.com,170.0,4,2,1,1,2018,Kenitra,0,0,1,0,0,0,1,0,0,1852959,2026-04-28 22:44:00
+162dac3a,sara@gmail.com,44.0,4,4,0,4,2012,Fès,0,0,1,0,1,0,0,0,0,959882,2026-04-29 00:12:11
+55a9d6e9,khadija@gmail.com,122.0,2,1,0,2,2009,Agadir,0,1,1,0,0,0,0,1,0,1400156,2026-04-29 00:28:50
+8b86c91c,khadija@gmail.com,222.0,11,5,1,4,2020,Rabat,1,1,1,1,1,1,1,1,1,3441710,2026-04-29 00:37:31
+4365b85a,khadija@gmail.com,133.0,3,3,0,3,2003,Marrakech,0,0,0,1,0,0,0,0,1,1631904,2026-04-29 00:49:14
+86fb76d7,sara@gmail.com,222.0,2,2,1,5,2020,Meknès,0,0,1,0,0,0,0,0,0,2073517,2026-04-29 01:25:20
+5045d3cc,sara@gmail.com,158.0,5,2,2,3,2007,Agadir,0,0,0,0,0,0,0,0,1,1694689,2026-04-29 02:02:55
+ef6d8d75,khadija@gmail.com,111.0,3,3,1,1,1998,Oujda,0,1,0,0,0,0,0,0,0,1049911,2026-04-29 02:35:46
+4c7da2c5,sara@gmail.com,135.0,2,2,1,1,2020,Béni Mellal,0,1,1,0,0,0,0,0,0,1549705,2026-04-29 05:13:33
