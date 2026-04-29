@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-import joblib
+import pickle
+import os
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
@@ -47,9 +48,9 @@ models = {
     "XGBoost": XGBRegressor(n_estimators=200, random_state=42)
 }
 
-results = {}
 best_model = None
 best_score = -1
+best_name = ""
 
 # =====================
 # TRAIN LOOP
@@ -67,22 +68,22 @@ for name, model in models.items():
     r2 = r2_score(y_test, pred)
     mae = mean_absolute_error(y_test, pred)
 
-    results[name] = (r2, mae)
-
     print(f"\n{name}")
     print("R2:", r2)
     print("MAE:", mae)
 
-    # best model
     if r2 > best_score:
         best_score = r2
         best_model = pipe
         best_name = name
 
 # =====================
-# SAVE BEST MODEL
+# SAVE BEST MODEL (FIXED)
 # =====================
-joblib.dump(best_model, "models/best_model.pkl")
+os.makedirs("models", exist_ok=True)
+
+with open("models/best_model.pkl", "wb") as f:
+    pickle.dump(best_model, f)
 
 print("\n====================")
 print("🏆 BEST MODEL:", best_name)
