@@ -1,0 +1,264 @@
+/* ============================================================
+   style.qss — Real Estate Prediction System
+   Palette:
+     Background: #e8e8dc  (warm beige)
+     Cards:      #ffffff
+     Primary:    #5fa8a0  (teal)
+     Signup:     #e87a8c  (rose-pink)
+     Text dark:  #1a3a3a
+     Text sub:   #5fa8a0
+   ============================================================ */
+
+QWidget {
+    font-family: "Segoe UI", "SF Pro Display", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: #1a3a3a;
+}
+
+/* ── Splash ───────────────────────────────────────────────── */
+QWidget#splashBg {
+    background-color: #2a6068;
+}
+QLabel#splashTitle {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+QLabel#splashSubtitle {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+}
+QLabel#splashStatus {
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+}
+QProgressBar#splashProgress {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    height: 6px;
+    border: none;
+}
+QProgressBar#splashProgress::chunk {
+    background: #9de0d8;
+    border-radius: 4px;
+}
+
+/* ── Auth ─────────────────────────────────────────────────── */
+QWidget#authBg {
+    background-color: #e8e8dc;
+}
+QWidget#authCard {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+QLabel#authTitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a3a3a;
+}
+QLabel#authSubtitle {
+    font-size: 13px;
+    color: #5fa8a0;
+    margin-bottom: 4px;
+}
+
+/* ── Main Window ──────────────────────────────────────────── */
+QWidget#mainBg {
+    background-color: #e8e8dc;
+}
+QScrollArea#mainScroll {
+    border: none;
+    background-color: #e8e8dc;
+}
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+}
+QScrollBar::handle:vertical {
+    background: rgba(95,168,160,0.4);
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+QWidget#formCard {
+    background-color: #ffffff;
+    border-radius: 18px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+QLabel#mainTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a3a3a;
+}
+QLabel#mainSubtitle {
+    font-size: 13px;
+    color: #5fa8a0;
+}
+QLabel#cardTitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a3a3a;
+    margin-bottom: 4px;
+}
+QLabel#fieldLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a3a3a;
+    margin-bottom: 2px;
+}
+
+/* ── Inputs ───────────────────────────────────────────────── */
+QLineEdit#fieldInput,
+QComboBox#fieldCombo {
+    background-color: #ffffff;
+    border: 1.5px solid #d0d8d6;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-size: 13px;
+    color: #1a3a3a;
+}
+QLineEdit#fieldInput:focus,
+QComboBox#fieldCombo:focus {
+    border-color: #5fa8a0;
+}
+QComboBox#fieldCombo::drop-down {
+    border: none;
+    padding-right: 12px;
+}
+QComboBox#fieldCombo QAbstractItemView {
+    background: #ffffff;
+    border: 1px solid #d0d8d6;
+    border-radius: 8px;
+    selection-background-color: #5fa8a0;
+    selection-color: white;
+    padding: 4px;
+}
+
+/* ── Feature Tiles ────────────────────────────────────────── */
+QWidget#featureTile {
+    background-color: #ffffff;
+    border: 1.5px solid #c8d8d5;
+    border-radius: 14px;
+}
+QWidget#featureTile:hover {
+    border-color: #5fa8a0;
+    background-color: #f0faf9;
+}
+QLabel#tileLabel {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a3a3a;
+}
+QCheckBox#tileCheck::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c0d0ce;
+    border-radius: 4px;
+    background: white;
+}
+QCheckBox#tileCheck::indicator:checked {
+    background: #5fa8a0;
+    border-color: #5fa8a0;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+QPushButton#btnPrimary {
+    background-color: #5fa8a0;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+QPushButton#btnPrimary:hover  { background-color: #4d9990; }
+QPushButton#btnPrimary:pressed{ background-color: #3d8880; }
+
+QPushButton#btnSignup {
+    background-color: #e87a8c;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+QPushButton#btnSignup:hover { background-color: #d96a7c; }
+
+QPushButton#btnPredict {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:0,
+        stop:0 #5fa8a0, stop:1 #3a7a72);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+QPushButton#btnPredict:hover {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:0,
+        stop:0 #4d9990, stop:1 #2d6a62);
+}
+
+QPushButton#linkBtn {
+    background: transparent;
+    color: #5fa8a0;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 4px;
+}
+QPushButton#linkBtn:hover {
+    color: #3d8880;
+    text-decoration: underline;
+}
+
+QPushButton#avatarChip {
+    background-color: #ffffff;
+    color: #1a3a3a;
+    border: 1px solid #d0d8d6;
+    border-radius: 22px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+/* ── Error ────────────────────────────────────────────────── */
+QLabel#errorLabel {
+    color: #c0392b;
+    font-size: 12px;
+    font-weight: 600;
+    background: #fdf0ef;
+    border-radius: 8px;
+    padding: 6px 10px;
+    border: 1px solid #e9b8b5;
+}
+QLabel#switchText {
+    color: #6b7c7a;
+    font-size: 13px;
+}
+
+/* ── Result Panel ─────────────────────────────────────────── */
+QWidget#resultPanel {
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:1,
+        stop:0 #3a7a72, stop:1 #1d4a45);
+    border-radius: 20px;
+}
+QLabel#resultSub {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    font-weight: 500;
+}
+QLabel#resultPrice {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+QLabel#resultMeta {
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+}
